@@ -2,7 +2,7 @@ import psycopg2
 from configparser import ConfigParser
 
 
-def config(filename='database.ini', section='postgresql'):
+def config(filename=r'/Users/elsanarsen/Desktop/pp2022/week 10/database.ini', section='postgresql'):
 	parser = ConfigParser()
 	parser.read(filename)
 	db = {}
@@ -20,7 +20,8 @@ def create_table():
 		"""
 		CREATE TABLE accounts(
 			username VARCHAR (20) UNIQUE NOT NULL,
-			tell VARCHAR (20) UNIQUE NOT NULL
+			tell VARCHAR (20) UNIQUE NOT NULL,
+			emaill VARCHAR (20) UNIQUE NOT NULL
 		);
 		"""	
 	)
